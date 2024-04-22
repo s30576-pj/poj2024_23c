@@ -18,18 +18,18 @@ public class Group {
         this.subjects = new ArrayList<>();
     }
 
-    public void addStudent(Student student) {
+    public void addStudent(@NonNull Student student) {
         students.add(student);
     }
 
-    public void removeStudent(Student student) {
+    public void removeStudent(@NonNull Student student) {
         students.remove(student);
     }
-    public void addSubject(Subject subject) {
+    public void addSubject(@NonNull Subject subject) {
         subjects.add(subject);
     }
 
-    public void removeSubject(Subject subject) {
+    public void removeSubject(@NonNull Subject subject) {
         subjects.remove(subject);
     }
 }

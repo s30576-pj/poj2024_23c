@@ -21,11 +21,24 @@ public class Student {
     }
 
     public void addToGroup(Group group) {
+        if (group == null) {
+            throw new IllegalArgumentException("The group cannot be null!");
+        }
         groups.add(group);
         group.addStudent(this);
     }
 
+    // Or:
+//     public void addToGroup(@NonNull Group group) {
+//        groups.add(group);
+//        group.addStudent(this);
+//    }
+
+
     public void removeToGroup(Group group) {
+        if (group == null) {
+            throw new IllegalArgumentException("The group cannot be null!");
+        }
         groups.remove(group);
         group.removeStudent(this);
     }
